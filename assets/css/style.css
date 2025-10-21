@@ -52,7 +52,7 @@ body{
 }
 
 section{
-    padding:2rem 7%;
+    padding:5rem 7%;
 }
 
 .heading{
@@ -276,7 +276,7 @@ section{
 }
 
 .about .row .content p{
-    font-size: 2.6rem;
+    font-size: 1.9rem;
     color:var(--cor-dourado);
     padding:1rem 0;
     line-height: 1.8;
@@ -657,7 +657,7 @@ section{
     }
 
     section{
-        padding:2rem;
+        padding:5rem;
     }
 
 }
