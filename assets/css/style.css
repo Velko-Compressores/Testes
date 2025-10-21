@@ -96,13 +96,13 @@ section{
 }
 
 .header .logo img{
-    height: 6rem;
+    height: 10rem;
 }
 
 .header .navbar a{
     font-weight: 700;
     margin:0 1rem;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     color:var(--cor-azul1);
 }
 
@@ -276,7 +276,7 @@ section{
 }
 
 .about .row .content p{
-    font-size: 1.6rem;
+    font-size: 2.6rem;
     color:var(--cor-dourado);
     padding:1rem 0;
     line-height: 1.8;
@@ -427,7 +427,7 @@ section{
 }
 
 .products .box-container .box .image img{
-    height: 25rem;
+    height: 35rem;
 }
 
 .products .box-container .box .content h3{
@@ -499,6 +499,7 @@ section{
 
 .contact .row{
     display: flex;
+    align-items: center;
     background:var(--cor-branco);
     flex-wrap: wrap;
     gap:1rem;
