@@ -731,10 +731,22 @@ section{
 
 .home-compressor-alternativo .content-compressor-alternativo{
     max-width: 60rem;
-    background-color: #25d366;
+    /* background-color: #25d366; */
 
 }
 
+.home-compressor-remanufaturado{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.home-compressor-remanufaturado .content-compressor-remanufaturado{
+    max-width: 60rem;
+    /* background-color: #25d366; */
+
+}
 
 
 
