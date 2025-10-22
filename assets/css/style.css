@@ -722,16 +722,17 @@ section{
 /*================================================================== */
 
 
-.home2{
+.home-compressor-alternativo{
     min-height: 80vh;
-  display: flex;
-  justify-content: center; /* Alinha horizontalmente */
-  /* align-items: center;     Alinha verticalmente */
-  padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
 }
 
-.home2 .content2{
+.home-compressor-alternativo .content-compressor-alternativo{
     max-width: 60rem;
+    background-color: #25d366;
+
 }
 
 
@@ -832,26 +833,10 @@ section{
   Color Themes
 -----------------------------*/
 
-
-/* #colorNav li.green{ */
-  /* This is the color of the menu item */
-  /* background-color:#00c08b; */
-  
-  /* This is the color of the icon */
-  /* color:#127a5d; */
-/* } */
-
 #colorNav li.green{background-color:#53bfe2;color:#2884a2;}
 #colorNav li.red{    background-color:#53bfe2;color:#2884a2;}
 #colorNav li.blue{    background-color:#53bfe2;color:#2884a2;}
 #colorNav li.yellow{   background-color:#53bfe2;color:#2884a2;}
 #colorNav li.purple{   background-color:#53bfe2;color:#2884a2;}
-
-/* #colorNav li.red{   background-color:#ea5080;color:#aa2a52;}
-#colorNav li.blue{    background-color:#53bfe2;color:#2884a2;}
-#colorNav li.yellow{  background-color:#f8c54d;color:#ab8426;}
-#colorNav li.purple{  background-color:#df6dc2;color:#9f3c85;} */
-
-
 
 
