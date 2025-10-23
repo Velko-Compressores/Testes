@@ -756,17 +756,17 @@ section{
 
 
 
-/*============================= Secao menus dropdown compressor alternativo e compressor remanufaturado===================================== */
+/*=== Secao menus dropdown compressor alternativo e compressor remanufaturado === */
 
 .mainmenubtn {
-    background-color: var(--cor-azul1);
-    color: var(--cor-branco);
+    background-color: var(--cor-branco);
+    /* border:.1rem solid var(--cor-dourado); */
     cursor: pointer;
     padding:20px;
     margin-top:20px;
 }
 .mainmenubtn:hover {
-    background-color: var(--cor-azul2);
+    background-color: var(--cor-branco);
     }
 .dropdown {
     position: relative;
@@ -774,7 +774,7 @@ section{
 }
 .dropdown-child {
     display: none;
-    background-color: var(--cor-azul2);
+    background-color: var(--cor-azul1);
     min-width: 50px;
 }
 .dropdown-child a {
