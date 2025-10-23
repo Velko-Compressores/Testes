@@ -396,6 +396,11 @@ section{
 
 /*===  NOSSOS PRODUTOS/products section starts  === */
 
+.products{
+    margin-top: 200PX;
+}
+
+
 .products .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -723,19 +728,24 @@ section{
 /*============================= Page Compressor Alternativo ===================================== */
 
  .home-compressor-alternativo{
+padding-top: 85rem;
     min-height: 80vh;
-    /* background-color: var(--cor-dourado); */
-    padding-top: 150px;
+    display: flex;
+    align-items: center;
+    background:url(../images/Tabela\ Compressores.png) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .home-compressor-alternativo .content-compressor-alternativo{
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
-    /* background:var(--cor-branco); */
-    flex-wrap: wrap;
-    gap: 20px;
+
+
+
 } 
+
+
+
+
 
 /*============================= Page Compressor Remanufaturado ===================================== */
 
@@ -753,6 +763,8 @@ section{
     flex-wrap: wrap;
     gap: 20px;
 }
+
+
 
 
 
