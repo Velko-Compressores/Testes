@@ -1,29 +1,9 @@
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const image = document.getElementById('compressor-img');
-      const panzoom = Panzoom(image, {
-        minScale: 0.1,
-        maxScale: 1000,
-        contain: 'false',
-        canvas: true // permite arrastar livremente
-      });
-
-      // Zoom com roda do mouse
-      image.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
-    });
-
-    
-
-/* --- Inicio add product 1 --- */
-
 document.addEventListener('DOMContentLoaded', () => {
     const purchaseButton = document.getElementById('purchaseButton');
     const cartBody = document.querySelector('.cart-table tbody');
     let cart = [];
 
-    // Lista de produtos
     const products = {
-
         1: 'Produto 1',
         2: 'Produto 2',
         3: 'Produto 3',
@@ -141,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         115: 'Produto 115',
     };
 
+
     function renderCart() {
         cartBody.innerHTML = '';
         cart.forEach(item => {
@@ -170,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCart();
     }
 
-    // Adiciona eventos para todos os links SVG
     Object.keys(products).forEach(id => {
         const link = document.getElementById(`add-product-${id}`);
         if (link) {
@@ -181,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Controle de quantidade
     cartBody.addEventListener('click', (e) => {
         if (e.target.classList.contains('increase')) {
             const id = parseInt(e.target.dataset.id);
@@ -201,7 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Finalizar compra
     purchaseButton.addEventListener('click', () => {
         if (cart.length === 0) {
             alert('Seu carrinho está vazio!');
@@ -212,16 +190,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
