@@ -213,9 +213,9 @@ section{
 .about .row{
     display: flex;
     background:var(--cor-branco);
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     padding: 5px;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .about .row .image{
@@ -235,8 +235,7 @@ section{
 
 
 
-/* Main */
-
+/* -- Main  -- */
 
 :root {
     --cor-azul1:rgb(28, 54, 97);
@@ -292,67 +291,23 @@ section{
     font-size: 16px;
 }
 
-/* Botão Finalizar Compra */
-.btn {
-    display: block;
-    width: 100%; /* ocupa toda a largura da tabela */
+
+.btn{
+    width: 100%;
     margin-top: 1rem;
     display: inline-block;
     padding: 1.1rem 5rem;
     font-size: 2.1rem;
     font-weight: 700;
     border-radius: 5px;
-    color: var(--cor-branco);
+    color:var(--cor-branco);
     background: var(--cor-azul1);
     cursor: pointer;
-    transition: filter 0.2s;
 }
 
 .btn:hover {
     filter: brightness(0.9);
 }
-
-/* Responsividade */
-@media (max-width: 991px) {
-    .btn {
-        padding: 0.8rem 2.5rem;
-        font-size: 1.6rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .btn {
-        padding: 0.6rem 2rem;
-        font-size: 1.4rem;
-    }
-}
-
-
-
-
-
-/* A partir de 1200px: coluna com content abaixo da image */
-@media (max-width: 1200px) {
-    .row {
-        flex-direction: column-reverse; /* coloca content abaixo da image */
-        align-items: center; /* centraliza horizontalmente */
-    }
-
-    .row .image,
-    .row .content {
-        width: 100%; /* ocupa toda a largura disponível */
-        text-align: center;
-    }
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -445,23 +400,26 @@ section{
 
 /* -- Final Botão Flutuante do WhatsApp Section Section  -- */
 
-
 /*===  Inicio Media Queries Section === */
- 
-@media (max-width:1560px){
 
-    html{
-        font-size: 60%;
+/* A partir de 1200px: coluna com content abaixo da image */
+@media (max-width: 1200px) {
+    .row {
+        flex-direction: column-reverse; /* coloca content abaixo da image */
+        align-items: center; /* centraliza horizontalmente */
     }
 
-    .header{
-        padding:1.5rem 2rem;
+    .row .image,
+    .row .content {
+        width: 100%; /* ocupa toda a largura disponível */
+        text-align: center;
     }
 
-    section{
-        padding:2rem;
+    .about .row .image {
+        flex: 1 1 5rem;
     }
 }
+
 
 @media (max-width:1200px){
 
@@ -494,20 +452,10 @@ section{
         right: 2rem;
     }
 
-    .home{
-        background-position: left;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .home .content h3{
-        font-size: 4.5rem;
-    }
-
-    .home .content p{
-        font-size: 1.5rem;
-    }
 }
+
+
+
 
 @media (max-width:450px){
 
@@ -518,7 +466,18 @@ section{
     .heading{
         font-size: 3.5rem;
     }
+
+
 }
 
+
+
+
+
+
 /* -- Final Inicio Media Queries Section Section  -- */
+
+
+
+
 
