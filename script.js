@@ -69,9 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lista de produtos com nomes e imagens reais
     const products = {
-        1: { name: 'Gasket set', image: 'assets/images/1 - Gasket set.jpg' },
-        2: { name: 'Built-in motor', image: 'assets/images/2 - Built-in motor.jpg' },
-        4: { name: 'Parallel key', image: 'assets/images/4 - Parallel key.jpg' }
+        1: { name: 'Gasket set', image: 'assets/images/1 - Gasket set.png' },
+        2: { name: 'Built-in motor', image: 'assets/images/2 - Built-in motor.png' },
+        4: { name: 'Parallel key', image: 'assets/images/4 - Parallel key.png' }
         // Adicione todos os outros produtos aqui...
     };
 
