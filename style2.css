@@ -32,7 +32,7 @@ html{
     scroll-padding-top: 9rem;
     /* scroll-behavior: smooth; */
     scroll-behavior: auto;
-    /* overflow: hidden; */
+    /* overflow: hidden;  */
 }
 
 html::-webkit-scrollbar{
@@ -56,20 +56,6 @@ section{
     padding:5rem 7%;
 }
 
-.heading{
-    text-align: center;
-    color:var(--cor-azul1);
-    text-transform: uppercase;
-    padding-bottom: 3.5rem;
-    font-size: 4rem;
-}
-
-.heading span{
-    color:var(--cor-azul2);
-    text-transform: uppercase;
-}
-
-/*===  Inicio Header Section  === */
 
 .header{
     background: var(--cor-branco);
@@ -208,108 +194,160 @@ section{
 /* -- Final Header Section  -- */
 
 
-/*---  Inicio About Section --- */
 
-.about .row{
+/*===  Inicio Container Section  === */
+
+
+.about .row {
+    padding-top: 100px;
     display: flex;
-    background:var(--cor-branco);
-    /* flex-wrap: wrap; */
-    padding: 5px;
-    padding-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
-
-.about .row .image{
-    flex:1 1 85rem;
-}
-
-.about .row .image img{
-    width: 100%;
-}
-.about .row .content{
-    flex:1rem;
-}
-
-/* -- Final About Section  -- */
-
-
-
-
-
-/* -- Main  -- */
-
-:root {
-    --cor-azul1:rgb(28, 54, 97);
-    --cor-branco: #fff;
-    --cor-cinza: #ccc;
-}
-
-/* Container principal */
+/* Primeiro image + content config layout*/
 .content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
+    flex: 1;
+    min-width: auto;
+    min-height: 500px;
 }
 
-/* Título da seção */
+.image {
+    flex: 3;
+    min-width: auto;
+    min-height: 500px;
+}
+
+/* Segundo image + content config stylo*/
+.content {
+    background: var(--cor-branco);
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.image {
+    background: var(--cor-branco);
+    padding: 5px;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    min-width: 100%;
+    min-height: auto;
+}
+
+#compressor-img {
+    width: 100%;
+    height: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto;
+}
+
 .section-title {
     font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px; /* separação do título para a tabela */
+    margin-bottom: 15px;
+    color: #222;
     text-align: center;
 }
 
-/* Tabela do carrinho */
 .cart-table {
     width: 100%;
-    background-color: #ddd8d8;
     border-collapse: collapse;
-    margin-bottom: 20px; /* separação da tabela para o botão */
-    border-radius: 6px;
-    overflow: hidden;
+    margin-bottom: 15px;
 }
 
-.cart-table thead tr {
-    background-color: #eaeaea;
-    border-bottom: 2px solid var(--cor-cinza);
+.cart-table th, .cart-table td {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    text-align: center;
 }
 
-.table-head-item {
-    text-align: left;
-    padding: 12px;
-    text-transform: uppercase;
+.cart-table th {
+    background-color: #f0f0f0;
     font-weight: bold;
-}
-
-.cart-table tbody tr {
-    border-bottom: 1px solid var(--cor-cinza);
-}
-
-.cart-table td {
-    padding: 12px;
-    font-size: 16px;
 }
 
 .btn {
-    display: block;
-    /* width: 80%;  */
-    margin: 20px auto 0 auto;   /* Centraliza horizontalmente */
-    padding: 1.1rem 2rem;
-    font-size: 2rem;
-    font-weight: 700;
-    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor-azul1);
     color: var(--cor-branco);
-    background: var(--cor-azul1);
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    text-align: center;
-    /* white-space: nowrap; */
-    transition: all 0.3s ease;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    filter: brightness(0.9);
+    background-color: var(--cor-azul2);
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about .row {
+        flex-direction: column-reverse;
+    }
+}
+
+
+/* -- Final Container Section  -- */
+
+
+
+/*===  Inicio Modal === */
+
+    .modal {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+    .modal-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        position: relative;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px; right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .modal img {
+        max-width: 500px;
+        margin-bottom: 10px;
+    }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .modal img {
+        max-width: 300px;
+        margin-bottom: 5px;
+    }
+}
+
+
+/*===  Final Modal === */
+
+
+
+
+
+
+
 
 
 
@@ -402,28 +440,26 @@ section{
 
 /* -- Final Botão Flutuante do WhatsApp Section Section  -- */
 
+
 /*===  Inicio Media Queries Section === */
 
-/* A partir de 1200px: coluna com content abaixo da image */
-@media (max-width: 1450px) {
-    .row {
-        flex-direction: column-reverse; /* coloca content abaixo da image */
-        align-items: center; /* centraliza horizontalmente */
+@media (max-width:991px){
+
+    html{
+        font-size: 60%;
     }
 
-    .row .image,
-    .row .content {
-        width: 100%; /* ocupa toda a largura disponível */
-        text-align: center;
+    .header{
+        padding:1.5rem 2rem;
     }
 
-    .about .row .image {
-        flex: 1 1 5rem;
+    section{
+        padding:2rem;
     }
+
 }
 
-
-@media (max-width:1200px){
+@media (max-width:768px){
 
     #menu-btn{
         display: inline-block;
@@ -453,8 +489,22 @@ section{
         width: 90%;
         right: 2rem;
     }
-}
 
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+
+    .home .content p{
+        font-size: 1.5rem;
+    }
+
+}
 
 @media (max-width:450px){
 
@@ -465,42 +515,29 @@ section{
     .heading{
         font-size: 3.5rem;
     }
-}
+    
 
+}
 
 /* -- Final Inicio Media Queries Section Section  -- */
 
 
 
-/*===  Inicio Modal === */
 
-    .modal {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: rgba(0,0,0,0.7);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
-    }
-    .modal-content {
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        text-align: center;
-        position: relative;
-    }
-    .close-btn {
-        position: absolute;
-        top: 10px; right: 20px;
-        font-size: 24px;
-        cursor: pointer;
-    }
-    .modal img {
-        max-width: 500px;
-        margin-bottom: 10px;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
