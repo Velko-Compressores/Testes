@@ -207,17 +207,19 @@ section{
     gap: 20px;
 }
 /* Primeiro image + content config layout*/
-.content {
+/* .content {
     flex: 1;
     min-width: auto;
     min-height: 500px;
-}
+} */
 
 .image {
     flex: 3;
     min-width: auto;
     min-height: 500px;
 }
+
+
 
 /* Segundo image + content config stylo*/
 .content {
@@ -267,12 +269,9 @@ section{
     border: 1px solid #ffffff;
     padding: 10px;
     text-align: center;
+    border-radius: 3px;
 }
 
-.cart-table th {
-    background-color: #f0f0f0;
-    font-weight: bold;
-}
 
 .btn {
     display: inline-block;
@@ -529,11 +528,18 @@ section{
 
 
 
+
+
+
+
 .content {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    flex: 1;
+    min-width: auto;
+    min-height: 500px;
 }
 
 .normal-section {
@@ -550,8 +556,8 @@ section{
 }
 
 .section-title {
-  font-size: 1.8rem;
-  color: #333;
+  font-size: 2.5rem;
+  color: var(--cor-azul1);
   margin-bottom: 15px;
   text-align: center;
 }
@@ -561,7 +567,7 @@ section{
   max-height: 350px;
   overflow-y: auto;
   margin-bottom: 20px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 6px;
 }
 
@@ -571,10 +577,13 @@ section{
 }
 
 .cart-table thead {
-  background-color: #007bff;
-  color: #fff;
-  position: sticky;
-  top: 0;
+    background-color: var(--cor-azul1);
+    color: var(--cor-branco);
+    position: sticky;
+    top: 0;
+
+    border: 1px solid #ffffff;
+    text-align: center;
 }
 
 .table-head-item {
@@ -583,9 +592,6 @@ section{
   font-weight: bold;
 }
 
-.cart-table tbody tr {
-  border-bottom: 1px solid #ddd;
-}
 
 .cart-table td {
   padding: 10px;
@@ -600,7 +606,7 @@ section{
   padding: 12px;
   background-color: var(--cor-azul1);
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   border: none;
   border-radius: 6px;
@@ -642,13 +648,82 @@ section{
 
 
 
+/* Linhas alternadas */
+.cart-table tbody tr:nth-child(odd) {
+  background-color: var(--cor-branco);
+}
+
+.cart-table tbody tr:nth-child(even) {
+  background-color: #f9fafc;
+}
+
+/* Texto em negrito para itens */
+.item-name {
+  font-weight: bold;
+}
+
+
+
+/* Controles de quantidade */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.quantity-controls button {
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Botão diminuir (-) */
+.quantity-controls .decrease {
+  background-color: #dc3545; /* vermelho */
+}
+
+.quantity-controls .decrease:hover {
+  background-color: #b02a37; /* vermelho mais escuro no hover */
+}
+
+/* Botão aumentar (+) */
+.quantity-controls .increase {
+  background-color: #28a745; /* verde */
+}
+
+.quantity-controls .increase:hover {
+  background-color: #218838; /* verde mais escuro no hover */
+}
+
+/* Quantidade */
+.quantity-controls span {
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
+
+
+/* Texto do item em negrito */
+
+.cart-table td:first-child {
+  font-weight: bold;
+}
 
 
 
 
 
-
-
-
-
-
+.cart-img {
+  width: 200px;   /* antes era 50px */
+  height: 200px;  /* antes era 50px */
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px; /* opcional para deixar cantos arredondados */
+}

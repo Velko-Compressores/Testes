@@ -69,16 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lista de produtos com nomes e imagens reais
     const products = {
-        1: { name: 'Gasket set', image: 'assets/images/1 - Gasket set.png' },
-        2: { name: 'Built-in motor', image: 'assets/images/2 - Built-in motor.png' },
-        4: { name: 'Parallel key', image: 'assets/images/4 - Parallel key.png' },
-        5: { name: 'Washer', image: 'assets/images/5 - Washer.png' },
-        7: { name: 'Hexagon head screw', image: 'assets/images/7 - Hexagon head screw.png' },
-        8: { name: 'Hexagon head screw', image: 'assets/images/8 - Hexagon head screw.jpg' },
-        9: { name: 'Gasket ring', image: 'assets/images/9 - Gasket ring.jpg' },
-        10: { name: 'Bearing cover', image: 'assets/images/10 - Bearing cover.jpg' },
-        12: { name: 'Gasket', image: 'assets/images/12 - Gasket.jpg' },
-        13: { name: 'Oil splasher plate', image: 'assets/images/13 - Oil splasher plate.jpg' }
+        1: { name: 'Item - 1', image: 'assets/images/1 - Gasket set.png' },
+        2: { name: 'Item - 2', image: 'assets/images/2 - Built-in motor.png' },
+        4: { name: 'Item - 4', image: 'assets/images/4 - Parallel key.png' },
+        5: { name: 'Item - 5', image: 'assets/images/5 - Washer.png' },
+        7: { name: 'Item - 7', image: 'assets/images/7 - Hexagon head screw.png' },
+        8: { name: 'Item - 8', image: 'assets/images/8 - Hexagon head screw.jpg' },
+        9: { name: 'Item - 9', image: 'assets/images/9 - Gasket ring.jpg' },
+        10: { name: 'Item - 10', image: 'assets/images/10 - Bearing cover.jpg' },
+        12: { name: 'Item - 12', image: 'assets/images/12 - Gasket.jpg' },
+        13: { name: 'Item - 13', image: 'assets/images/13 - Oil splasher plate.jpg' }
         // Adicione todos os outros produtos aqui...
     };
 
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </td>
                 <td>
-                    <img src="${item.image}" alt="${item.name}" class="cart-img" style="width:50px;height:50px;object-fit:cover;cursor:pointer;">
+                    <img src="${item.image}" alt="${item.name}" class="cart-img" style="width:80px;height:80px;object-fit:cover;cursor:pointer;">
                 </td>
             `;
             cartBody.appendChild(row);
