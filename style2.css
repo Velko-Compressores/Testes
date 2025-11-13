@@ -53,7 +53,8 @@ body{
 }
 
 section{
-    padding:5rem 7%;
+    padding:2rem 7%;
+    padding-top: 70px;
 }
 
 
@@ -244,7 +245,7 @@ section{
 #compressor-img {
     width: 100%;
     height: 100%;
-    max-width: 700px;
+    max-width: 75rem;
     display: block;
     margin: 0 auto;
 }
@@ -524,6 +525,116 @@ section{
 
 
 
+
+
+
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.normal-section {
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 400px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Wrapper com altura fixa e rolagem */
+.table-wrapper {
+  max-height: 350px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table thead {
+  background-color: #007bff;
+  color: #fff;
+  position: sticky;
+  top: 0;
+}
+
+.table-head-item {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.cart-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Botão fixo dentro do container */
+#purchaseButton {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--cor-azul1);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+#purchaseButton:hover {
+  background-color: var(--cor-azul2);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .cart-table thead {
+    display: none;
+  }
+
+  .cart-table tr {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .cart-table td {
+    display: block;
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #purchaseButton {
+    font-size: 1.2rem;
+  }
+}
 
 
 

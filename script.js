@@ -71,7 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const products = {
         1: { name: 'Gasket set', image: 'assets/images/1 - Gasket set.png' },
         2: { name: 'Built-in motor', image: 'assets/images/2 - Built-in motor.png' },
-        4: { name: 'Parallel key', image: 'assets/images/4 - Parallel key.png' }
+        4: { name: 'Parallel key', image: 'assets/images/4 - Parallel key.png' },
+        5: { name: 'Washer', image: 'assets/images/5 - Washer.png' },
+        7: { name: 'Hexagon head screw', image: 'assets/images/7 - Hexagon head screw.png' },
+        8: { name: 'Hexagon head screw', image: 'assets/images/8 - Hexagon head screw.jpg' },
+        9: { name: 'Gasket ring', image: 'assets/images/9 - Gasket ring.jpg' },
+        10: { name: 'Bearing cover', image: 'assets/images/10 - Bearing cover.jpg' },
+        12: { name: 'Gasket', image: 'assets/images/12 - Gasket.jpg' },
+        13: { name: 'Oil splasher plate', image: 'assets/images/13 - Oil splasher plate.jpg' }
         // Adicione todos os outros produtos aqui...
     };
 
