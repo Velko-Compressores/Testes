@@ -58,28 +58,24 @@ window.onscroll = () =>{
 /*====================================================================================== */
 
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const purchaseButton = document.getElementById('purchaseButton');
     const cartBody = document.querySelector('.cart-table tbody');
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-img');
-    const modalDesc = document.getElementById('modal-desc');
+    const modalInfo = document.getElementById('modal-info');
     const closeBtn = document.querySelector('.close-btn');
     let cart = [];
 
-    // Lista de produtos com nomes e imagens reais
+    // Lista de produtos com nomes, imagens e descrições
     const products = {
-        1: { name: 'Item - 1', image: 'assets/images/1 - Gasket set.png' },
-        2: { name: 'Item - 2', image: 'assets/images/2 - Built-in motor.png' },
-        4: { name: 'Item - 4', image: 'assets/images/4 - Parallel key.png' },
-        5: { name: 'Item - 5', image: 'assets/images/5 - Washer.png' },
-        7: { name: 'Item - 7', image: 'assets/images/7 - Hexagon head screw.png' },
-        8: { name: 'Item - 8', image: 'assets/images/8 - Hexagon head screw.jpg' },
-        9: { name: 'Item - 9', image: 'assets/images/9 - Gasket ring.jpg' },
-        10: { name: 'Item - 10', image: 'assets/images/10 - Bearing cover.jpg' },
-        12: { name: 'Item - 12', image: 'assets/images/12 - Gasket.jpg' },
-        13: { name: 'Item - 13', image: 'assets/images/13 - Oil splasher plate.jpg' }
-        // Adicione todos os outros produtos aqui...
+        1: { name: 'Gasket set', image: 'assets/images/1 - Gasket set.png', description: 'Peça de vedação para compressores.' },
+        2: { name: 'Built-in motor', image: 'assets/images/2 - Built-in motor.png', description: 'Motor embutido para alta performance.' },
+        4: { name: 'Parallel key', image: 'assets/images/4 - Parallel key.png', description: 'Chave paralela para fixação segura.' },
+        5: { name: 'Washer', image: 'assets/images/5 - Washer.png', description: 'Arruela para suporte mecânico.' },
+        7: { name: 'Hexagon head screw', image: 'assets/images/7 - Hexagon head screw.png', description: 'Parafuso cabeça sextavada.' }
     };
 
     function renderCart() {
@@ -87,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cart.forEach(item => {
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td>${item.name}</td>
+                <td>Item - ${item.id}</td>
                 <td>
                     <div class="quantity-controls">
                         <button class="decrease" data-id="${item.id}">-</button>
@@ -96,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </td>
                 <td>
-                    <img src="${item.image}" alt="${item.name}" class="cart-img" style="width:80px;height:80px;object-fit:cover;cursor:pointer;">
+                    <img src="${item.image}" alt="${item.name}" class="cart-img" data-id="${item.id}" style="width:80px;height:80px;object-fit:cover;cursor:pointer;">
                 </td>
             `;
             cartBody.appendChild(row);
@@ -114,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCart();
     }
 
-    // Adiciona eventos para todos os botões de adicionar produto
     Object.keys(products).forEach(id => {
         const link = document.getElementById(`add-product-${id}`);
         if (link) {
@@ -125,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Controle de quantidade
     cartBody.addEventListener('click', (e) => {
         if (e.target.classList.contains('increase')) {
             const id = parseInt(e.target.dataset.id);
@@ -148,8 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Abrir modal ao clicar na imagem
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('cart-img')) {
-            modalImg.src = e.target.src;
-            modalDesc.textContent = e.target.alt;
+            const id = parseInt(e.target.dataset.id);
+            const product = products[id];
+            modalImg.src = product.image;
+            modalInfo.textContent = `Compressor-4FES-3 | ${product.name} | ${product.description}`;
             modal.style.display = 'flex';
         }
     });
@@ -159,14 +155,12 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'none';
     });
 
-    // Fechar modal clicando fora do conteúdo
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.style.display = 'none';
         }
     });
 
-    // Finalizar compra
     purchaseButton.addEventListener('click', () => {
         if (cart.length === 0) {
             alert('Seu carrinho está vazio!');
@@ -177,6 +171,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-
-
