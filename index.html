@@ -25,7 +25,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style_clean.css">
+
+  <!-- Panzoom via CDN -->
+  <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js" defer></script>
+
+  <!-- custom js file link  -->
+  <script src="mod.js" defer></script>
 
 </head>
 <body>
@@ -61,6 +67,18 @@
 
 <!-- Final Header Section  -->
 
+    <!-- Modal atualizado -->
+    <div id="image-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img id="modal-img" src="" alt="">
+        <p id="modal-info"></p>
+      </div>
+    </div>
+
+
+
+
 
 
 <!-- Inicio About Section  -->
@@ -82,7 +100,9 @@
                       <th class="table-head-item third-col">Imagem</th>
                   </tr>
               </thead>
-              <tbody></tbody>
+              <tbody>
+                <!-- JS insere os itens aqui -->
+              </tbody>
 
           </table>
           </div>
@@ -1140,13 +1160,19 @@
 <!-- Final About Section -->
 
     <!-- Modal para exibir imagem maior -->
-    <div id="image-modal" class="modal">
+    <!-- <div id="image-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <img id="modal-img" src="" alt="">
             <p id="modal-desc"></p>
         </div>
-    </div>
+    </div> -->
+
+
+
+
+
+
 
 
   <!-- Inicio Botão Flutuante do WhatsApp -->
@@ -1168,16 +1194,6 @@
       <div class="credit">Velko Compressores Ltda <span>| all rights reserved</span> </div>
   </section>
   <!-- Final Footer Section  -->
-
-<!-- custom js file link  -->
-<script src="assets/js/script.js"></script>
-
-  <!-- Panzoom via CDN -->
-  <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script>
-
-  <!-- custom js file link  -->
-  <script src="script.js"></script>
-  <!-- <script src="loja.JS"></script> -->
   
 </body>
 </html>
