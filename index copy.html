@@ -2,73 +2,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Configurações básicas -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velko Compressores</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Serviços de alta qualidade em compressores. Velko Compressores é referência no setor.">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph (para redes sociais) -->
-    <meta property="og:title" content="Velko-Compressores">
-    <meta property="og:description" content="Nosso compromisso é superar as expectativas dos nossos clientes, garantindo serviços de alta qualidade.">
-    <meta property="og:image" content="https://i.imgur.com/mHPL4fp.png">
-    <meta property="og:url" content="https://velko-compressores.github.io/Velko-Compressores">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Velko-Compressores">
-    <meta name="twitter:description" content="Nosso compromisso é superar as expectativas dos nossos clientes, garantindo serviços de alta qualidade.">
-    <meta name="twitter:image" content="https://i.imgur.com/mHPL4fp.png">
+    <!-- Meta tags e links aqui -->
+    <meta name="og:title" content="Velko-Compressores">
+    <meta name="og:description" content="Nosso compromisso é superar as expectativas dos nossos clientes, garantindo serviços de alta qualidade.">
+    <meta name="og:image" content="https://i.imgur.com/mHPL4fp.png">
+    <meta name="og:url" content="https://velko-compressores.github.io/Velko-Compressores">
 
     <!-- Favicons -->
-    <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
-    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    <link href="assets/images/favicon.png" rel="icon">
+    <link href="assets/images/favicon.png" rel="apple-touch-icon">
 
-    <!-- Font Awesome (apenas versão mais recente) -->
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Link font awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-    <!-- CSS personalizado -->
-    <link rel="stylesheet" href="style.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style copy.css">
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js" defer></script>
-    <script src="script.js" defer></script>
+  <!-- Panzoom via CDN -->
+  <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js" defer></script>
+
+  <!-- custom js file link  -->
+  <script src="script.js" defer></script>
+
 </head>
-
 <body>
 
 <!-- Inicio Header Section  -->
-    <header class="header">
-        <a href="/index.html" class="logo">
-            <img src="assets/images/logo1.png" alt="Logotipo da empresa">
-        </a>
 
-        <nav class="navbar" aria-label="Menu principal">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/index.html#about">Sobre</a></li>
-                <li><a href="/index.html#blogs">Serviços</a></li>
-                <li><a href="/index.html#products">Produtos</a></li>
-                <li><a href="/index.html#contact">Contato</a></li>
-            </ul>
-        </nav>
+<header class="header">
 
-        <div class="icons">
-            <button id="search-btn" aria-label="Abrir busca"><i class="fas fa-search"></i></button>
-            <button id="cart-btn" aria-label="Abrir carrinho"><i class="fas fa-shopping-cart"></i></button>
-            <button id="menu-btn" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
-        </div>
-    </header>
+    <a href="#" class="logo">
+        <img src="assets/images/logo1.png" alt="logotipo da empresa">
+    </a>
+
+    <nav class="navbar">
+        <a href="../index.html">HOME</a>
+        <a href="../index.html#about">SOBRE</a>
+        <a href="../index.html#blogs">SERVIÇOS</a>
+        <a href="../index.html#products">PRODUTOS</a>
+        <a href="../index.html#contact">CONTATO</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
+
+</header>
+
 <!-- Final Header Section  -->
 
-
-    <!-- Modal -->
+    <!-- Modal atualizado -->
     <div id="image-modal" class="modal">
       <div class="modal-content">
         <span class="close-btn">&times;</span>
@@ -79,35 +78,48 @@
 
 
 
+
+
+
 <!-- Inicio About Section  -->
 
-    <section class="about" id="about">
-      <div class="row">
-        <article class="content">
-            <h2 class="section-title">Itens 4FES-3</h2>
-            <div class="table-wrapper" role="region" aria-label="Tabela de itens">
-                <table class="cart-table" role="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Item</th>
-                            <th scope="col">Quantidade</th>
-                            <th scope="col">Imagem</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- JS insere os itens aqui -->
-                    </tbody>
-                </table>
-            </div>
-            <button type="button" class="btn" id="purchaseButton" aria-label="Adicionar itens ao carrinho">
-                Adicionar ao Carrinho
-            </button>
-        </article>
+<section class="about" id="about">
+<div class="row">
 
-        <!-- <h1>Imagem Vetorial Interativa</h1> -->
-        <div class="svg-wrapper">
-            <svg id="compressor-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4384.8 3153.6" role="img" aria-label="Imagem vetorial do compressor">
-                <defs>
+      <div class="content">
+        <!-- Tabela do carrinho -->
+        <section class="container normal-section">
+          <h2 class="section-title">ITENS 4FES-3</h2>
+          <!-- Inicio do Wrapper para rolagem -->
+          <div class="table-wrapper">
+          <table class="cart-table">
+              <thead>
+                  <!-- <tr>
+                      <th class="table-head-item first-col">Item</th>
+                      <th class="table-head-item third-col">Quantidade</th>
+                      <th class="table-head-item third-col">Imagem</th>
+                  </tr> -->
+              </thead>
+              <tbody>
+                <!-- JS insere os itens aqui -->
+              </tbody>
+
+          </table>
+          </div>
+          <!-- Final do Wrapper para rolagem -->
+          <button type="button" class="btn" id="purchaseButton">ADICIONAR AO CARRINHO</button>
+        </section>
+      </div>
+
+      <div class="image">
+        <div class="container">
+          <div id="image-container">
+
+
+            
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg id="compressor-img" data-name="Camada 2" svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4384.8 3153.6"> 
+              <defs>
                 <style>
                   .cls-1, .cls-2 {
                     fill: #fff;
@@ -144,7 +156,7 @@
                   .cls-7, .cls-8 {
                     fill: none;
                   }
-                  
+
                   .cls-2 {
                     stroke-width: .25px;
                   }
@@ -1137,11 +1149,27 @@
               </g>
             </svg>
 
-        </div> <!-- Final div class svg-wrapper  -->
-      </div> <!-- Final div class row -->
-    </section> <!-- Final div class about -->
+          </div> <!-- Final div id image-container  -->
+        </div> <!-- Final div class container -->
+      </div> <!-- Final div class image -->
+
+
+</div> <!-- Final div class row -->
+</section> <!-- Final section class about -->
 
 <!-- Final About Section -->
+
+    <!-- Modal para exibir imagem maior -->
+    <!-- <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="modal-img" src="" alt="">
+            <p id="modal-desc"></p>
+        </div>
+    </div> -->
+
+
+
 
 
 

@@ -1,4 +1,5 @@
 
+
 /*===  inicio section resposiva  === */
 
 let navbar = document.querySelector('.navbar');
